@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_nested_navigation/examples/simple_flutter/app.dart';
 
-import 'examples/routemaster/app.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const SimplNavApp());
 }

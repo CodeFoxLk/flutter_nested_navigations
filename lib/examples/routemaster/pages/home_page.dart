@@ -15,6 +15,16 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Home"),
+        bottom: TabBar(controller: tabPage.controller, tabs: const [
+          Tab(
+            icon: Icon(Icons.download),
+            text: 'Products',
+          ),
+          Tab(
+            icon: Icon(Icons.store),
+            text: 'Products',
+          )
+        ]),
       ),
       body: Column(
         children: [
