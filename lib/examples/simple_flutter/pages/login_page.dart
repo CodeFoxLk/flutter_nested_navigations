@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:routemaster/routemaster.dart';
+import 'package:flutter_nested_navigation/examples/simple_flutter/pages/home_page.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -7,8 +8,8 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(title: const Text("Login Page")),
+    return Scaffold(
+      appBar: AppBar(title: const Text("Simnpl flutter Login Page")),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -16,16 +17,14 @@ class LoginPage extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.all(30.0),
             child: TextField(
-              decoration: InputDecoration(
-                hintText: "User Name"
-              ),
+              decoration: InputDecoration(hintText: "User Name"),
             ),
           ),
-          ElevatedButton(onPressed: (){
-           //  context.read<AppState>().onChangeAppState(0);
-             Routemaster.of(context).push('/home');
-
-          }, child: const Text("Login"))
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(HomePage.route);
+              },
+              child: const Text("Login"))
         ],
       ),
     );
