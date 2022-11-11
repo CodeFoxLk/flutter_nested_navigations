@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:routemaster/routemaster.dart';
+import 'package:go_router/go_router.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class GoLoginPage extends StatelessWidget {
+  const GoLoginPage({super.key});
 
   static const routeName = '/';
 
@@ -22,8 +22,9 @@ class LoginPage extends StatelessWidget {
           ),
           ElevatedButton(
               onPressed: () {
-                //  context.read<AppState>().onChangeAppState(0);
-                Routemaster.of(context).push('/home');
+                context.goNamed('product_list',
+                    queryParams: <String, String>{'acd': 'true'},
+                    params: <String, String>{'category': 'mobiles'});
               },
               child: const Text("Login"))
         ],

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_nested_navigation/examples/go_router/goapp.dart';
 
-import 'examples/routemaster/app.dart';
+import 'examples/go_router/app.dart';
+
 
 void main() {
-  runApp(const MyApp());
+  runApp( GoApp());
   
 }
+
+
